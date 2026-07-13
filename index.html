@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI Agent 知识库 — 探索 Claude Code Skills、多智能体协作与提示词工程的数字前沿">
+  <meta name="theme-color" content="#090014">
+  <title>AGENT_KERNEL // AI 智能体知识库</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       GLOBAL OVERLAYS
+       ============================================================ -->
+  <div class="scanlines-overlay" aria-hidden="true"></div>
+  <div class="chromatic-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <header class="nav" id="navbar" role="banner">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="返回首页">AGENT_KERNEL</a>
+      <nav aria-label="主导航">
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about" data-nav="about">关于</a></li>
+          <li><a href="#skills" data-nav="skills">技能</a></li>
+          <li><a href="#knowledge" data-nav="knowledge">知识库</a></li>
+          <li><a href="#architecture" data-nav="architecture">架构</a></li>
+          <li><a href="#contact" data-nav="contact">联系</a></li>
+        </ul>
+      </nav>
+      <button class="nav-hamburger" id="hamburger" aria-label="菜单" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#about" data-nav="about">关于</a>
+    <a href="#skills" data-nav="skills">技能</a>
+    <a href="#knowledge" data-nav="knowledge">知识库</a>
+    <a href="#architecture" data-nav="architecture">架构</a>
+    <a href="#contact" data-nav="contact">联系</a>
+  </div>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <!-- Perspective Grid -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <!-- Floating Sun -->
+    <div class="hero-sun" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-terminal" id="heroTerminal" aria-live="polite">
+        <span id="terminalText"></span><span class="cursor" aria-hidden="true"></span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span class="gradient-text">探索智能体</span><br>
+        <span style="color: #fff;">数字前沿</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        AI Agents &nbsp;·&nbsp; Claude Code Skills &nbsp;·&nbsp; 多智能体协作 &nbsp;·&nbsp; 知识共享
+      </p>
+
+      <div class="hero-actions">
+        <a href="#skills" class="btn btn-primary btn-lg">
+          <span class="btn-inner">⚡ 探索技能</span>
+        </a>
+        <a href="#knowledge" class="btn btn-secondary btn-lg">
+          <span class="btn-inner">📡 阅读文章</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT / MANIFESTO
+       ============================================================ -->
+  <section class="section" id="about">
+    <div class="container">
+      <span class="section-label">ABOUT.md</span>
+      <h2 class="section-title">关于这个<span class="gradient-text">数字空间</span></h2>
+      <p class="section-subtitle" style="margin-bottom: 3rem;">
+        一个专注于 AI 智能体、Claude Code 技能开发与多智能体协作的知识实验场。
+      </p>
+
+      <div class="about-grid">
+        <!-- Sidebar: File List -->
+        <aside class="about-sidebar" role="complementary">
+          <div class="about-sidebar-title">📁 /home/agent_kernel/</div>
+          <ul class="about-file-list">
+            <li class="active">README.md</li>
+            <li>MANIFESTO.md</li>
+            <li>SKILLS.json</li>
+            <li>KNOWLEDGE.db</li>
+            <li>AGENTS.yaml</li>
+            <li>CHANGELOG.md</li>
+          </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="about-content">
+          <div class="terminal-window">
+            <div class="terminal-titlebar">
+              <div class="terminal-dot terminal-dot--magenta" aria-hidden="true"></div>
+              <div class="terminal-dot terminal-dot--cyan" aria-hidden="true"></div>
+              <div class="terminal-dot terminal-dot--orange" aria-hidden="true"></div>
+              <span class="terminal-title">terminal — README.md</span>
+            </div>
+            <div class="terminal-body">
+              <p>
+                <span style="color: var(--color-cyan);">$ whoami</span><br>
+                你好，我是一名 AI 智能体架构师与 Claude Code 重度使用者。
+              </p>
+              <p>
+                我相信<strong style="color: var(--color-magenta);">智能体不仅仅是工具，它们是数字世界的协作者</strong>——能够自主思考、规划、执行复杂任务的数字实体。从单个 Skill 的精心设计到多智能体协作流水线的编排，每一个环节都蕴含着工程美学与系统设计的智慧。
+              </p>
+              <p>
+                这个站点是我的<strong style="color: var(--color-cyan);">数字花园</strong>，记录着我在 AI Agent 开发、Claude Code Skill 构建、提示词工程以及智能体评测等领域的实践与思考。如果你也在探索这条路径，希望这里的内容能为你点亮一盏<strong style="color: var(--color-orange);">霓虹灯</strong>。
+              </p>
+              <div class="about-cmd">
+                > <span class="blink" aria-hidden="true"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       AGENT SKILLS SHOWCASE
+       ============================================================ -->
+  <section class="section" id="skills" style="background: rgba(255,0,255,0.02);">
+    <div class="container">
+      <span class="section-label">SKILLS.json</span>
+      <h2 class="section-title">智能体<span class="gradient-text">技能矩阵</span></h2>
+      <p class="section-subtitle" style="margin-bottom: 3rem;">
+        六大核心领域，构建完整的 AI Agent 能力体系。
+      </p>
+
+      <div class="skills-grid">
+
+        <!-- Skill 1: Claude Code Skills -->
+        <article class="card reveal">
+          <div class="card-icon-wrap">
+            <span class="card-icon-inner" aria-hidden="true">⚡</span>
+          </div>
+          <h3 class="card-title">Claude Code Skills</h3>
+          <p class="card-desc">
+            自定义技能的开发、编排与部署。从简单的快捷指令到复杂的多步骤工作流，用 Skill 系统构建可复用的 AI 能力模块。
+          </p>
+        </article>
+
+        <!-- Skill 2: Multi-Agent Workflows -->
+        <article class="card reveal">
+          <div class="card-icon-wrap">
+            <span class="card-icon-inner" aria-hidden="true">🔗</span>
+          </div>
+          <h3 class="card-title">多智能体协作</h3>
+          <p class="card-desc">
+            Pipeline、Parallel、Workflow 三种协作模式深度解析。如何设计智能体间的通信协议与任务分配策略，让多个 Agent 高效协同。
+          </p>
+        </article>
+
+        <!-- Skill 3: Prompt Engineering -->
+        <article class="card reveal">
+          <div class="card-icon-wrap">
+            <span class="card-icon-inner" aria-hidden="true">🎯</span>
+          </div>
+          <h3 class="card-title">提示词工程</h3>
+          <p class="card-desc">
+            系统化提示词设计方法论：角色设定、思维链、结构化输出、Few-shot 示例。让模型输出更稳定、更可控、更精准。
+          </p>
+        </article>
+
+        <!-- Skill 4: Tool Design -->
+        <article class="card reveal">
+          <div class="card-icon-wrap">
+            <span class="card-icon-inner" aria-hidden="true">🔧</span>
+          </div>
+          <h3 class="card-title">工具与 MCP 集成</h3>
+          <p class="card-desc">
+            MCP 协议实战：构建自定义工具服务器、设计工具描述 Schema、处理工具调用错误与重试策略。让 Agent 连接真实世界。
+          </p>
+        </article>
+
+        <!-- Skill 5: Knowledge & RAG -->
+        <article class="card reveal">
+          <div class="card-icon-wrap">
+            <span class="card-icon-inner" aria-hidden="true">🧠</span>
+          </div>
+          <h3 class="card-title">知识增强生成</h3>
+          <p class="card-desc">
+            知识图谱构建、向量数据库选型、RAG 管道优化。让智能体拥有长期记忆与领域知识，突破上下文窗口的限制。
+          </p>
+        </article>
+
+        <!-- Skill 6: Agent Evaluation -->
+        <article class="card reveal">
+          <div class="card-icon-wrap">
+            <span class="card-icon-inner" aria-hidden="true">📊</span>
+          </div>
+          <h3 class="card-title">智能体评测</h3>
+          <p class="card-desc">
+            构建 Eval 体系：场景设计、指标定义、回归测试。使用对抗验证与 Judge Panel 模式，持续迭代提升智能体质量。
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       KNOWLEDGE ARTICLES
+       ============================================================ -->
+  <section class="section" id="knowledge">
+    <div class="container">
+      <span class="section-label">KNOWLEDGE.db</span>
+      <h2 class="section-title">知识库<span class="gradient-text">精选文章</span></h2>
+      <p class="section-subtitle" style="margin-bottom: 2rem;">
+        关于 AI Agent 开发的深度思考与实践记录。
+      </p>
+
+      <!-- File Explorer Window -->
+      <div class="explorer-window">
+        <div class="explorer-titlebar">
+          <div class="terminal-dot terminal-dot--magenta" aria-hidden="true"></div>
+          <div class="terminal-dot terminal-dot--cyan" aria-hidden="true"></div>
+          <div class="terminal-dot terminal-dot--orange" aria-hidden="true"></div>
+          <span class="terminal-title">FILE_EXPLORER — /articles/</span>
+        </div>
+        <div class="explorer-body">
+          <div class="articles-grid">
+
+            <!-- Article 1 -->
+            <article class="article-card reveal">
+              <div class="article-thumb">
+                <div class="article-thumb-bg" style="background: linear-gradient(135deg, #FF00FF 0%, #4a0080 50%, #00FFFF 100%);"></div>
+                <div class="article-thumb-overlay"></div>
+              </div>
+              <div class="article-body">
+                <div class="article-date">2026.07 · 入门指南</div>
+                <h3 class="article-title">Claude Code 终极指南：从入门到精通</h3>
+                <a href="#" class="article-link">READ_MORE</a>
+              </div>
+            </article>
+
+            <!-- Article 2 -->
+            <article class="article-card reveal">
+              <div class="article-thumb">
+                <div class="article-thumb-bg" style="background: linear-gradient(135deg, #FF9900 0%, #FF00FF 50%, #00FFFF 100%);"></div>
+                <div class="article-thumb-overlay"></div>
+              </div>
+              <div class="article-body">
+                <div class="article-date">2026.06 · 架构设计</div>
+                <h3 class="article-title">多智能体协作模式：Pipeline vs Parallel 深度对比</h3>
+                <a href="#" class="article-link">READ_MORE</a>
+              </div>
+            </article>
+
+            <!-- Article 3 -->
+            <article class="article-card reveal">
+              <div class="article-thumb">
+                <div class="article-thumb-bg" style="background: linear-gradient(135deg, #00FFFF 0%, #008080 50%, #FF00FF 100%);"></div>
+                <div class="article-thumb-overlay"></div>
+              </div>
+              <div class="article-body">
+                <div class="article-date">2026.05 · 实践经验</div>
+                <h3 class="article-title">构建生产级 AI Agent 的 10 个关键教训</h3>
+                <a href="#" class="article-link">READ_MORE</a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+        <div class="explorer-statusbar">
+          3 files(s) in /articles/ &nbsp;|&nbsp; FREE SPACE: 99.9 GB &nbsp;|&nbsp; SYSTEM: ONLINE
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ARCHITECTURE / HOW IT WORKS (Timeline)
+       ============================================================ -->
+  <section class="section" id="architecture" style="background: rgba(0,255,255,0.02);">
+    <div class="container">
+      <span class="section-label">ARCHITECTURE.md</span>
+      <h2 class="section-title">智能体<span class="gradient-text">构建流程</span></h2>
+      <p class="section-subtitle" style="margin-bottom: 4rem; text-align: center; max-width: none;">
+        从概念到部署——四个步骤构建一个生产就绪的 AI Agent
+      </p>
+
+      <div class="timeline">
+
+        <!-- Step 1: Define -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node" aria-hidden="true">01</div>
+          <div class="timeline-card">
+            <h4>🎯 DEFINE — 定义目标</h4>
+            <p>明确智能体的职责边界、输入输出、成功标准。设计 System Prompt 与角色设定，确定所需工具与技能范围。</p>
+            <code>> claude --system "你是一个代码审查专家..." --skills code-review,simplify</code>
+          </div>
+        </div>
+
+        <!-- Step 2: Build -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node" aria-hidden="true">02</div>
+          <div class="timeline-card">
+            <h4>🔧 BUILD — 构建技能</h4>
+            <p>编写 Skill 定义文件，配置工具链与 MCP 服务器，设计 Agent Loop 的控制流与错误处理策略。</p>
+            <code>> cat .claude/skills/my-agent/SKILL.md
+            > claude --skill my-agent "分析这个项目"</code>
+          </div>
+        </div>
+
+        <!-- Step 3: Test -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node" aria-hidden="true">03</div>
+          <div class="timeline-card">
+            <h4>🧪 TEST — 对抗评测</h4>
+            <p>使用 Judge Panel 多维度评估、对抗验证 (Adversarial Verify)、回归测试套件。Loop-until-dry 模式确保覆盖率。</p>
+            <code>> claude --skill verify "检查最新变更" --effort max</code>
+          </div>
+        </div>
+
+        <!-- Step 4: Deploy -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node" aria-hidden="true">04</div>
+          <div class="timeline-card">
+            <h4>🚀 DEPLOY — 部署迭代</h4>
+            <p>集成到 CI/CD 流水线，配置监控与告警，建立反馈循环。持续收集用户反馈，迭代优化 Agent 表现。</p>
+            <code>> claude --skill deploy --env production --monitor enabled</code>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       STATS BAR
+       ============================================================ -->
+  <div class="stats-section" aria-label="数据统计">
+    <div class="container">
+      <div class="stats-grid">
+        <div>
+          <div class="stat-value" data-count="47">0</div>
+          <div class="stat-label">Skills Created</div>
+        </div>
+        <div>
+          <div class="stat-value" data-count="128">0</div>
+          <div class="stat-label">Articles Published</div>
+        </div>
+        <div>
+          <div class="stat-value" data-count="16">0</div>
+          <div class="stat-label">Agents Deployed</div>
+        </div>
+        <div>
+          <div class="stat-value" data-count="2.4">0</div>
+          <div class="stat-label">K Community Members</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       FINAL CTA / CONTACT
+       ============================================================ -->
+  <section class="section cta-section" id="contact">
+    <div class="cta-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="cta-inner reveal">
+        <h2 class="cta-headline gradient-text">准备好构建你的第一个智能体了吗？</h2>
+        <p class="cta-subtitle">
+          订阅 Newsletter，获取最新的 AI Agent 开发教程、Claude Code 技巧与行业洞察。
+        </p>
+
+        <form class="input-group" onsubmit="event.preventDefault(); alert('🚀 SIGNAL_RECEIVED // 感谢订阅！');">
+          <input
+            type="email"
+            class="input-terminal"
+            placeholder="> ENTER_YOUR_EMAIL..."
+            aria-label="输入你的邮箱地址"
+            required
+          >
+          <button type="submit" class="btn btn-primary btn-md" style="flex-shrink: 0;">
+            <span class="btn-inner">📡 订阅</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-status">SYSTEM_READY</div>
+        <p style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--color-chrome-muted);">
+          &copy; 2026 AGENT_KERNEL // 由霓虹灯与赛博梦驱动
+        </p>
+        <ul class="footer-links">
+          <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://x.com" target="_blank" rel="noopener">X / Twitter</a></li>
+          <li><a href="#" target="_blank" rel="noopener">RSS</a></li>
+          <li><a href="mailto:hello@agent-kernel.dev">Email</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
